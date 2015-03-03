@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title>Beastmode & Skittles</title>
+  <link rel="stylesheet" type="text/css" href="beastmode.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>It's Game Time</h1>
+      <p>Marshawn needs his Power Pellets.</p>
+      <p>Only problem, Beastmode eats them in a certain order.</p>
+      <p>Lets help him out.</p> 
+    </header>
+    <section id="question">
+      <p>Marshawn likes to eat the red ones first, then green, yellow, orange, and the purple ones last.</p>
+      <form></form>
+    </section>
+    <section id="sktl">
+    <ul id="skitteList">
+    </ul>
+    </section>
+    <button id="sort">Sort the Skittles</button>
+  </main>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript">
+      $(function() {
+        var populateSkittles = function() {
+          var i = 0;
+          do {
+            i++;
+            $("ul").append("<li></li>");
+          } while(i <50);
+        };
+        populateSkittles();        
+        
+        $('li').each(function(){
+          colorNumber = 'color' + Math.floor(Math.random() * 5);
+          $(this).addClass(colorNumber);    
+        });
+
+        $(".color0").append("<li><image src='IMAGES/red.png' alt='skittle'><span>1</span></li>");
+        $(".color1").append("<li><image src='IMAGES/green.png' alt='skittle'><span>2</span></li>");
+        $(".color2").append("<li><image src='IMAGES/yellow.png' alt='skittle'><span>3</span></li>");
+        $(".color3").append("<li><image src='IMAGES/orange.png' alt='skittle'><span>4</span></li>");
+        $(".color4").append("<li><image src='IMAGES/purple.png' alt='skittle'><span>5</span></li>");
+
+      $('button').click(function(sort) {
+        sort.preventDefault();
+        var skittleList = $("li").get();
+
+        skittleList.sort(function (a,b) {
+          return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());})
+        $.each(skittleList, function(i, li){
+        $('ul').append(li);
+        });   
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+* {
+  font-family: futura;
+  font-style: italic;
+  font-stretch: extra-condensed;
+}
+#sktl {
+  float: right;
+  width: 40em;
+  border-top: 50%;
+  display: inline-block;
+}
+ul {
+  list-style-type: none;
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 40em;
+}
+span {
+  visibility: hidden;
+}
+li {
+  float: right;
+  width: 74px;
+  padding: 0;
+  margin-top: -31px;
+}
+body {
+  background-image: url("IMAGES/LYNCH.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: futura;
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: extra-condensed;
+}
+header {
+  float: left;
+  width: 45%;
+  display: inline-block;
+}
+header p {
+  font-size: 25px;
+  z-index: 2;
+  color: #CEE3F6; 
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+}
+h1 {
+  font-size: 85px;
+  color: #CEE3F6;
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;
+  z-index: 1;
+}
+#question {
+  font-size: 25px;
+  float: left;
+  width: 45%;
+  clear: left;
+  color: #CEE3F6;
+  text-shadow: -1px 0 #000000, 0 -1px #000000, 1px 0 #000000, 0 0px #000000;
+}
+button {
+  margin-top: 20px;
+  margin-left: 60px;
+  font-size: 25px;
+  color: #0B0B3B;
+  background-color: #64FE2E
+  z-index: 3;
+  float: left;
+  clear: left;
+}
